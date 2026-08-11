@@ -1,8 +1,11 @@
 # BestDriver-was
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 BestDriver의 Spring Boot API 서버입니다.
 
+=======
+>>>>>>> daadce9698896cabb883a711206a44a1814c5f6b
 =======
 >>>>>>> daadce9698896cabb883a711206a44a1814c5f6b
 ## Team
@@ -39,6 +42,7 @@ BestDriver의 Spring Boot API 서버입니다.
 - 하나의 커밋에는 하나의 논리적인 변경만 포함합니다.
 - 상세 설명이 필요하면 제목 다음에 빈 줄을 두고 본문을 작성합니다.
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ## 로컬 실행
 
@@ -63,5 +67,7 @@ mvn --batch-mode verify
 수행합니다. `main` push가 성공하면 `ghcr.io/<owner>/<repository>:sha-<commit>`과
 `latest` 이미지를 발행합니다. 저장소 변수 `EC2_CD_ENABLED`를 `true`로 설정한
 경우에만 EC2의 `~/bestdriver`에 배포합니다.
+=======
+>>>>>>> daadce9698896cabb883a711206a44a1814c5f6b
 =======
 >>>>>>> daadce9698896cabb883a711206a44a1814c5f6b

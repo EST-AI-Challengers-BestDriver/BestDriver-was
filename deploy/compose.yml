@@ -1,0 +1,25 @@
+services:
+  was:
+    image: ${WAS_IMAGE:?WAS_IMAGE is required}
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:${WAS_HOST_PORT:-8080}:8080"
+    environment:
+      SPRING_PROFILES_ACTIVE: prod
+    env_file:
+      - path: was.runtime.env
+        required: false
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1:8080/actuator/health"]
+      interval: 10s
+      timeout: 3s
+      retries: 6
+      start_period: 30s
+    networks:
+      bestdriver:
+        aliases: [was]
+
+networks:
+  bestdriver:
+    name: bestdriver
+    external: true

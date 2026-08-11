@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: bestdriver-was
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      probes:
+        enabled: true
+
+server:
+  shutdown: graceful

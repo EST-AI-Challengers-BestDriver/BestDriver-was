@@ -40,7 +40,7 @@ BestDriver의 Spring Boot API 서버입니다.
 
 ## 로컬 실행
 
-Java 21과 Maven 3.9 이상을 사용합니다.
+Java 17과 Maven 3.9 이상을 사용합니다.
 
 ```bash
 mvn spring-boot:run

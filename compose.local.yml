@@ -1,0 +1,20 @@
+services:
+  postgres:
+    image: postgres:17-alpine
+    restart: unless-stopped
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: bestdriver
+      POSTGRES_USER: bestdriver
+      POSTGRES_PASSWORD: bestdriver
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U bestdriver -d bestdriver"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+    volumes:
+      - bestdriver-postgres-local:/var/lib/postgresql/data
+
+volumes:
+  bestdriver-postgres-local:
